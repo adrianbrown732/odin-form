@@ -10,7 +10,7 @@
   --spacing-lrg: calc(var(--spacing) * 2);
   --spacing-xl: calc(var(--spacing) * 4);
 
-  font-family: "Inter-Variable";
+  font-family: "inter-variable";
 }
 
 * {
@@ -25,30 +25,48 @@ main {
   color: var(--main-text);
   width: 1200px;
   margin: 0 auto;
+  /* margin-top: 20px; */
 }
 
 /* Form background and logo 
 **********************************************/
-main .form-bg {
+.form-bg {
   position: relative;
   grid-column: span 5;
   background-image: url(/img/pie-bg.png);
   text-align: center;
 }
 
-main .form-bg h1 {
+.form-bg h1 {
   position: absolute;
-  width: 100%;
-  padding: var(--spacing-xs);
-  top: 35%;
-  background: hsla(0, 0%, 96%, 0.85);
+  top: 25%;
+  left: 0;
+  right: 0;
+
+  padding: var(--spacing-sm);
+  background: hsla(0, 0%, 96%, 0.8);
+
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: "inter-variable", sans-serif;
+  font-variation-settings: "wght" 100, "slnt" 0;
 }
 
-main .form-bg span {
+.form-bg span {
   display: block;
+
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: 0.75em;
+  text-indent: 0.75em;
+  font-family: "linotype-didot", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 0.5em;
 }
 
-/* Form styles 
+/* FORM STYLES
 **********************************************/
 main form {
   grid-column: span 7;
@@ -83,7 +101,7 @@ form section:nth-child(odd) {
 
   padding-top: var(--spacing-sm);
   padding-right: var(--spacing-xl);
-  padding-bottom: var(--spacing);
+  padding-bottom: var(--spacing-sm);
   padding-left: var(--spacing);
 }
 
@@ -98,7 +116,7 @@ form section:nth-child(odd) {
 
 .section-signup label {
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: bold;
   font-size: 0.5rem;
   letter-spacing: 0.125em;
 }
@@ -118,4 +136,28 @@ form section:nth-child(odd) {
   padding-right: var(--spacing-xl);
   padding-bottom: var(--spacing-lrg);
   padding-left: var(--spacing);
+}
+
+.section-button button {
+  border: none;
+  border-radius: 5px;
+  background: var(--main-text);
+  color: var(--bg-text);
+  font-weight: bold;
+  padding: 10px 25px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.section-button button,
+.section-button a {
+  cursor: pointer;
+}
+
+.section-button p {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.section-button a {
+  color: var(--main-text);
 }
